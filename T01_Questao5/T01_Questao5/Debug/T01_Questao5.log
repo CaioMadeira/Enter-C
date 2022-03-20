@@ -1,0 +1,5 @@
+﻿  questao5.c
+c:\users\caiom\documents\github\enter-c\t01_questao5\t01_questao5\questao5.c(12): warning C4477: 'printf': a cadeia de formato '%u' requer um argumento do tipo 'unsigned int', mas um argumento variadic 2 tem o tipo '__int64'
+  c:\users\caiom\documents\github\enter-c\t01_questao5\t01_questao5\questao5.c(12): note: considere usar '%llu' na cadeia de formato
+  c:\users\caiom\documents\github\enter-c\t01_questao5\t01_questao5\questao5.c(12): note: considere usar '%I64u' na cadeia de formato
+  T01_Questao5.vcxproj -> C:\Users\caiom\Documents\GitHub\Enter-C\T01_Questao5\Debug\T01_Questao5.exe
