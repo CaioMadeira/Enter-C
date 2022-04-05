@@ -1,0 +1,3 @@
+﻿  exercicioPonteiro.c
+c:\users\caiom\source\repos\exerciciosdiversos\exerciciosdiversos\exercicioponteiro.c(32): warning C4477: 'printf': a cadeia de formato '%p' requer um argumento do tipo 'void *', mas um argumento variadic 1 tem o tipo 'int'
+  ExerciciosDiversos.vcxproj -> C:\Users\caiom\source\repos\ExerciciosDiversos\Debug\ExerciciosDiversos.exe
