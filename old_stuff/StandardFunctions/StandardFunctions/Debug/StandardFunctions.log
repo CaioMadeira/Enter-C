@@ -1,5 +1,0 @@
-﻿  main.c
-c:\users\caiom\documents\github\enter-c\standardfunctions\standardfunctions\main.c(7): warning C4013: 'testFunc_getc' indefinido; assumindo extern retornando int
-c:\users\caiom\documents\github\enter-c\standardfunctions\standardfunctions\main.c(8): error C2143: erro de sintaxe: ';' ausente antes de '}'
-c:\users\caiom\documents\github\enter-c\standardfunctions\standardfunctions\main.c(13): warning C4013: 'getch' indefinido; assumindo extern retornando int
-c:\users\caiom\documents\github\enter-c\standardfunctions\standardfunctions\main.c(21): error C2198: 'getc': poucos argumentos para chamada
