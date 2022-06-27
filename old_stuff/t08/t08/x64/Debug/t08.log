@@ -1,0 +1,6 @@
+﻿cl : Linha de comando warning D9025: substituindo '/sdl' com '/GS-'
+  main.c
+c:\users\caiom\documents\github\enter-c\t08\t08\main.c(17): warning C4013: 'StartsWith' indefinido; assumindo extern retornando int
+c:\users\caiom\documents\github\enter-c\t08\t08\main.c(18): warning C4047: 'função': 'const char *const ' difere em níveis de indireção de 'int'
+c:\users\caiom\documents\github\enter-c\t08\t08\main.c(18): warning C4024: 'printf': tipos diferentes para parâmetro formal e real 1
+  t08.vcxproj -> C:\Users\caiom\Documents\GitHub\Enter-C\t08\x64\Debug\t08.exe

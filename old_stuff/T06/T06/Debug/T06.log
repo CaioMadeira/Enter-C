@@ -1,0 +1,3 @@
+﻿cl : Linha de comando warning D9025: substituindo '/sdl' com '/GS-'
+  main.c
+  T06.vcxproj -> C:\Users\caiom\Documents\GitHub\Enter-C\T06\Debug\T06.exe

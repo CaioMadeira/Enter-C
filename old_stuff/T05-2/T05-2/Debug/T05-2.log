@@ -1,0 +1,3 @@
+﻿cl : Linha de comando warning D9025: substituindo '/sdl' com '/GS-'
+  main.c
+  T05-2.vcxproj -> C:\Users\caiom\Documents\GitHub\Enter-C\T05-2\Debug\T05-2.exe
