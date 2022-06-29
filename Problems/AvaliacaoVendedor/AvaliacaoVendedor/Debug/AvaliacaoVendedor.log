@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\caiom\documents\github\enter-c\problems\avaliacaovendedor\avaliacaovendedor\main.c(27): warning C4013: 'calculaExtra' indefinido; assumindo extern retornando int
+c:\users\caiom\documents\github\enter-c\problems\avaliacaovendedor\avaliacaovendedor\main.c(32): warning C4142: 'calculaExtra': redefinição benigna de tipo
+c:\users\caiom\documents\github\enter-c\problems\avaliacaovendedor\avaliacaovendedor\main.c(27): error C4700: variável local não inicializada 'aval' usada
+c:\users\caiom\documents\github\enter-c\problems\avaliacaovendedor\avaliacaovendedor\main.c(37): warning C4716: 'calculaExtra': deve retornar um valor
