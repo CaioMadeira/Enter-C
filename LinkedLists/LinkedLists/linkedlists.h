@@ -5,11 +5,15 @@
 //  Created by caiomadeira on 29/06/22.
 //
 #include <stdio.h>
+#include <stdlib.h>
+
+typedef struct aluno Aluno;
+typedef struct listacontrole ListaControle;
 
 
-void createList(void);
-void addList(void);
-void removeList(void);
-void destroyList(void);
-typedef struct linkedList LinkedList;
+
+
+
+
+
 

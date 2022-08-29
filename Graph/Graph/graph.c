@@ -3,7 +3,7 @@
 Caio Madeira
 1921050
 -------
-Anotações:
+Anotaï¿½ï¿½es:
 Edge - Aresta
 
 
@@ -12,73 +12,33 @@ Edge - Aresta
 #include <stdio.h>
 #include <stdlib.h>
 #include "graph_auxiliar.h"
+struct node
+{
+	struct Node *proximo;
+	int verticeNoFinal;
+};
 
 struct graph 
 {
-	int num_vertices;
-	float **pesos; // para graficos ponderados
-	int* vectorGrau[MAX]; //para cada vertice quantas arestas ele possui
-	int **arestas; // matriz de arestas, sendo um ponteiro para i e um outro para j
+	int tamanhoVetor;
+	Node ** lista;
 };
 
-struct edge
+struct edge 
 {
-	int *edges1[];
+	int verticeInicial;
+	int verticeFinal;
 };
-
 
 Graph * criaGrafo(int num_vertices)
 {
-	Graph * grafo = (Graph*)malloc(sizeof(struct graph));
-	if (grafo == NULL)
+	Graph *g;
+	g->lista = (Node *)malloc(sizeof(Node));
+	if (g->lista == NULL)
 	{
 		return NULL;
 	}
-	else
-	{
-		grafo->num_vertices = num_vertices;
-		grafo->arestas = (int**)malloc(num_vertices * sizeof(int));
-		if (grafo->arestas == NULL)
-		{
-			return NULL;
-		}
-		else
-		{
-			for (int i = 0; i < num_vertices; i++)
-			{
-				for (int j = 0; i < num_vertices; j++)
-				{
-					grafo->arestas[i] = grafo->vectorGrau[j];
-
-				}
-			}
-			return grafo;
-		}
+	else {
+		return g;
 	}
-}
-
-void montaGrafo(Graph *grafo, int *vetorArestas, int tamVetorArestas)
-{
-
-}
-
-void imprimeGrafo(Graph *grafo)
-{
-
-}
-
-
-int ehAresta(Graph *grafo, int fromNode, int toNode) 
-{
-
-}
-
-void destroiGrafo(Graph *grafo) 
-{
-
-}
-
-int adicionaAresta(Graph *grafo, int fromNode, int toNode)
-{
-
 }
