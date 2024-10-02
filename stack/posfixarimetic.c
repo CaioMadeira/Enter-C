@@ -23,7 +23,7 @@ https://www.ime.usp.br/~kellyrb/mac2166_2015/tabela_ascii.html
 // Macros
 #define TRUE 1
 #define FALSE 0
-#define DEBUG 1 // 1 = ativado
+#define DEBUG 0 // 1 = ativado
 
 struct node
 {
