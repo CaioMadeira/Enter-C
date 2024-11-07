@@ -228,16 +228,15 @@ public class BinaryTreeOfInteger {
         }
     }
 
-    /*
-     *  positionsCentral() - Recursivo e com método auxiliar
-     *  
-     */
     public LinkedListOfInteger positionsCentral() {
         LinkedListOfInteger lista = new LinkedListOfInteger();
         positionsCentralAux(root, lista);
         return lista;
     }
-
+    /*
+     *  positionsCentralAux() - Recursivo e com método auxiliar
+     *  
+     */
     public void positionsCentralAux(Node n, LinkedListOfInteger lista)
     {
         if (n != null)

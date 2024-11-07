@@ -1,120 +1,71 @@
-/*
-TE - Subarvore da esquerda
-TD - SUbarvore da direita
+#include <stdio.h>
+#include <stdlib.h>
 
-Filhos - Nodos filhos 
-    - Nodo da direita;
-    - Nodo da esquerda;
-
-Qtd de nodos variam de 0 a 2
-
-Comeco sempre da esquerda
-*/
-
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<stdbool.h>
-
-struct node
-{
+struct node {
     char x;
-    struct node* root;
-    struct node* td;
-    struct node* te;
+    struct node* right; // Filho direito
+    struct node* left;  // Filho esquerdo
 };
 
 typedef struct node Node;
 
-Node* newNode(Node* root, char x)
-{
+// Cria um novo nó com o valor dado
+Node* newNode(char x) {
     Node* new = (Node*)malloc(sizeof(Node));
-    if (new != NULL)
-    {
+    if (new != NULL) {
         new->x = x;
-        new->td = NULL;
-        new->te = NULL;
-        new->root = root;
-        return new;
+        new->right = NULL;
+        new->left = NULL;
     }
-    return NULL;
+    return new;
 }
 
-Node* addRight(Node* root, char x)
-{
-    if (root == NULL)
-        newNode(root, x);
-    else 
-    {
-        if (x < root->x)
-            root->te = newNode(root->te, x);
+// Adiciona um nó à direita
+Node* addRight(Node* root, char x) {
+    if (root == NULL) {
+        return newNode(x);
+    } else {
+        if (x > root->x) {  // Verifica se o valor é maior para ir à direita
+            root->right = addRight(root->right, x);
+        }
     }
     return root;
 }
 
-Node* addLeft(Node* root, char x)
-{
-    if (root == NULL) { newNode(root, x); }
-    else 
-    {
-        if (x > root->x)
-            root->td = newNode(root->td, x);
+// Adiciona um nó à esquerda
+Node* addLeft(Node* root, char x) {
+    if (root == NULL) {
+        return newNode(x);
+    } else {
+        if (x < root->x) {  // Verifica se o valor é menor para ir à esquerda
+            root->left = addLeft(root->left, x);
+        }
     }
     return root;
 }
 
-void printTree(Node* root)
-{
-    if (root != NULL)
-    {
-        printTree(root->te);
+// Imprime a árvore em ordem central (in-order traversal)
+void positionCentral(Node* root) {
+    if (root != NULL) {
+        positionCentral(root->left);
         printf("%c\n", root->x);
-        printTree(root->td);
+        positionCentral(root->right);
     }
 }
 
-bool isOperator(char x)
-{
-    switch (x)
-    {
-    case '+':
-        return true;
-    case '-':
-        return true;
-    case '/':
-        return true;    
-    case '*':
-        return true;
-    }
-    return false;
-}
+int main(void) {
+    Node* root = newNode('A'); // Cria o nó raiz
 
-bool isLetter(char x)
-{
-    if ((x >= 'A' || x >= 'a') && (x >= 'z' || x >= 'Z'))
-        return true;
-    else
-        return false;
-}
+    // Adiciona os elementos na árvore
+    addLeft(root, 'B');
+    addRight(root, 'C');
+    addLeft(root->left, 'D');
+    addRight(root->left, 'E');
+    addLeft(root->right, 'F');
+    addRight(root->right, 'G');
 
-char isMiddleOp(const char* y, char middle)
-{
-    if (isLetter(middle) == true)
-        middle = isMiddleOp(y, y[(strlen(y) / 2) + 1]);
-    return middle;
-}
-
-int main(void)
-{
-    const char* y = "(A+B)-(C*(D-E)+(F/G))";
-
-    char middle = y[strlen(y) / 2];
-    Node* root = addLeft(root, middle);
-    
-    for(int i = middle; i < strlen(y); i++)
-        root = addLeft(root, y[i]);
-
-    printTree(root);
+    // Imprime a árvore em ordem central
+    positionCentral(root);
 
     return 0;
 }
