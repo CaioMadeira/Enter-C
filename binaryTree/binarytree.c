@@ -1,5 +1,4 @@
 /*
-
 TE - Subarvore da esquerda
 TD - SUbarvore da direita
 
@@ -7,7 +6,9 @@ Filhos - Nodos filhos
     - Nodo da direita;
     - Nodo da esquerda;
 
+Qtd de nodos variam de 0 a 2
 
+Comeco sempre da esquerda
 */
 
 #include<stdio.h>
